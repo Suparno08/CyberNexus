@@ -1,0 +1,7 @@
+{
+  "name": "cybernexus",
+  "version": "1.0.0",
+  "description": "Free cyber security tools",
+  "scripts": { "start": "node server.js" },
+  "engines": { "node": ">=18" }
+}

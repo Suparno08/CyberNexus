@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>CyberNexus — Free cyber security tools</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IM+Fell+English:ital@1&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@500&family=Manrope:wght@500;700;800&display=swap">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 100 100%27><text y=%27.9em%27 font-size=%2790%27>🛡️</text></svg>">
+<link rel="stylesheet" href="style.css">
+<script>document.documentElement.classList.add('js')</script>
+</head>
+<body>
+<header class="nav">
+ <a class="brand" href="#top"><span class="mark"><svg viewBox="0 0 20 20" width="18" height="18" aria-hidden="true"><path d="M10 2.5 16.5 5v4.6c0 3.8-2.6 6.6-6.5 7.9-3.9-1.3-6.5-4.1-6.5-7.9V5z" fill="#f2f7ff"/><path d="m7.2 10 2 2 3.6-4" stroke="#2f6bff" stroke-width="1.7" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></span>CyberNexus</a>
+ <nav class="navlinks"><a href="#tools">Tools</a><a href="#why">Why CyberNexus</a><a href="#learn">Learn</a><a href="#faq">FAQ</a></nav>
+ <a class="go" href="#tools">Open tools</a>
+</header>
+
+<main id="top">
+<section class="hero">
+ <div class="hero-l">
+  <p class="pill"><span class="dot"></span>Free tools · no sign-up</p>
+  <h1><span class="ln"><span>Check every link</span></span><span class="ln"><span>before you <em>trust</em> it.</span></span></h1>
+  <p class="lede">CyberNexus is a cabinet of nine free security tools: check links, certificates, DNS, headers, domains, IPs, files and passwords.</p>
+  <div><button class="cta" onclick="openTool('url')">Check a link ↗</button></div>
+  <div class="stats"><div><b>9</b><span>security tools</span></div><div><b>0</b><span>accounts needed</span></div><div><b>4</b><span>run fully offline</span></div></div>
+ </div>
+ <div class="panel hpanel"><div class="mist" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></div><div class="grain" aria-hidden="true"></div>
+  <p class="kick">( Pick a tool )</p>
+  <div class="tgrid"><button class="tcard glass" onclick="openTool('url')"><i>🔗</i><b>Phishing link checker</b><span>Spot risky URLs</span></button><button class="tcard glass" onclick="openTool('ip')"><i>🌐</i><b>IP address checker</b><span>Type, scope, formats</span></button><button class="tcard glass" onclick="openTool('pw')"><i>🔑</i><b>Password tester</b><span>Strength in bits</span></button><button class="tcard glass" onclick="openTool('ssl')"><i>🔒</i><b>SSL checker</b><span>Certificate and expiry</span></button><button class="tcard glass" onclick="openTool('dns')"><i>🧭</i><b>DNS lookup</b><span>A, MX, TXT and more</span></button><button class="tcard glass" onclick="openTool('headers')"><i>🛡️</i><b>Security headers</b><span>Grade a site A–F</span></button><button class="tcard glass" onclick="openTool('hash')"><i>#️⃣</i><b>Hash generator</b><span>MD5 and SHA family</span></button><button class="tcard glass" onclick="openTool('whois')"><i>📇</i><b>WHOIS lookup</b><span>Who owns a domain</span></button><button class="tcard glass" onclick="openTool('file')"><i>📁</i><b>File reputation</b><span>Check a file’s hash</span></button></div>
+ </div>
+</section>
+
+<section class="sec" id="why">
+ <p class="eyebrow rv">( Why CyberNexus )</p>
+ <h2 class="rv">Quick, private and <em>clear</em>.</h2>
+ <p class="sub rv">Security tools shouldn’t need a degree to read. Every result comes with a verdict and the reasons behind it.</p>
+ <div class="cards">
+  <article class="card rv"><span class="num">A</span><h3>Private by design</h3><p>Link, IP, password and hash checks run inside your browser. Files are hashed locally and never uploaded.</p></article>
+  <article class="card rv"><span class="num">B</span><h3>Plain-English results</h3><p>Green, amber or red, plus a short list of exactly what we noticed and why it matters.</p></article>
+  <article class="card rv"><span class="num">C</span><h3>Nine tools, one place</h3><p>From certificates and DNS to WHOIS and file reputation, without juggling nine different websites.</p></article>
+ </div>
+</section>
+
+<section id="tools" class="sec">
+ <p class="eyebrow rv">( The cabinet )</p>
+ <h2 class="rv">Pick a tool, get an <em>answer</em>.</h2>
+ <p class="sub rv">Four tools run entirely in your browser. Five ask the CyberNexus server to look something up for you.</p>
+</section>
+<section class="panel tpanel"><div class="mist" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></div><div class="grain" aria-hidden="true"></div>
+ <div class="top">
+  <p class="kick">( Choose a tool )</p>
+  <div class="tabs glass" role="tablist">
+   <button class="tab" role="tab" data-t="url" aria-selected="true">Phishing link checker</button>
+   <button class="tab" role="tab" data-t="ip" aria-selected="false">IP address checker</button>
+   <button class="tab" role="tab" data-t="pw" aria-selected="false">Password tester</button>
+  </div>
+  <div class="tool glass" id="t-url">
+   <h3>Phishing link checker</h3>
+   <p>Paste a suspicious link. We never open it, we only read its structure for known warning signs.</p>
+   <div class="row"><input id="u" placeholder="https://secure-paypa1-login.example.com/verify" autocomplete="off" spellcheck="false"><button class="go" id="ugo">Analyse</button></div>
+   <div class="res" id="ures"></div>
+  </div>
+  <div class="tool glass" id="t-ip" hidden>
+   <h3>IP address checker</h3>
+   <p>Enter an IPv4 or IPv6 address to see its type, scope and number formats.</p>
+   <div class="row"><input id="i" placeholder="192.168.1.10 or 2001:db8::1" autocomplete="off" spellcheck="false"><button class="go" id="igo">Inspect</button></div>
+   <div class="res" id="ires"></div>
+  </div>
+  <div class="tool glass" id="t-pw" hidden>
+   <h3>Password strength tester</h3>
+   <p>Typed text is analysed locally and never stored or sent anywhere.</p>
+   <div class="row"><input id="p" type="text" placeholder="Try a passphrase…" autocomplete="off" spellcheck="false"></div>
+   <div class="res on" id="pres"></div>
+  </div>
+ </div>
+</section>
+
+<section class="sec" id="learn">
+ <p class="eyebrow rv">( Learn )</p>
+ <h2 class="rv">How to spot a <em>phishing</em> link.</h2>
+ <p class="sub rv">Six habits that stop most scams before they start.</p>
+ <div class="cards c3"><article class="card rv"><span class="num">01</span><h3>Read the real domain</h3><p>Only the part just before the final dot-ending counts. In paypal.com.secure-login.xyz the real site is secure-login.xyz.</p><a class="try" onclick="openTool('url')">Try the link checker →</a></article><article class="card rv"><span class="num">02</span><h3>Watch for look-alikes</h3><p>paypa1 uses a number one, and rn can pass for m. Scammers register near-copies of trusted names.</p><a class="try" onclick="openTool('url')">Test a suspicious link →</a></article><article class="card rv"><span class="num">03</span><h3>Distrust urgency</h3><p>“Account suspended”, “act within 24 hours”, “you won”. Pressure is a classic phishing tactic.</p></article><article class="card rv"><span class="num">04</span><h3>Don’t trust the padlock alone</h3><p>HTTPS only means the connection is encrypted. Criminals get certificates too.</p><a class="try" onclick="openTool('ssl')">Inspect a certificate →</a></article><article class="card rv"><span class="num">05</span><h3>Check how old the domain is</h3><p>Phishing sites are often days old. A brand-new domain claiming to be a big company is a red flag.</p><a class="try" onclick="openTool('whois')">Look up a domain →</a></article><article class="card rv"><span class="num">06</span><h3>Go direct</h3><p>Don’t click. Open the official site or app yourself, or type the address by hand.</p></article></div>
+</section>
+
+<section class="sec" id="faq">
+ <p class="eyebrow rv">( FAQ )</p>
+ <h2 class="rv">Good questions.</h2>
+ <div class="faq"><details class="rv"><summary>Does a clean result mean a link is safe?</summary><p>No. CyberNexus reads a link’s structure and registration details for warning signs. It can’t see page content or live blocklists, so treat results as a second opinion, and if you’re unsure, don’t click.</p></details><details class="rv"><summary>Are my files uploaded?</summary><p>No. A file is hashed inside your browser. Only its SHA-256 fingerprint is looked up (on VirusTotal, when a key is set on the server).</p></details><details class="rv"><summary>Which tools need the server?</summary><p>The SSL checker, DNS lookup, security headers, WHOIS lookup and file reputation ask the CyberNexus server to fetch data. The link checker, IP checker, password tester and hash generator run entirely in your browser.</p></details><details class="rv"><summary>A tool says it can’t reach the server. What now?</summary><p>Start it with “npm start” in the project folder and open the site at http://127.0.0.1:3000 rather than double-clicking the HTML file.</p></details><details class="rv"><summary>Is MD5 safe to use?</summary><p>Not for security. MD5 and SHA-1 can be forged. Use SHA-256 or stronger for anything that matters; MD5 is shown for compatibility with older checksums.</p></details></div>
+</section>
+</main>
+
+<footer class="fwrap">
+ <div class="fleft">
+  <div><a class="brand" href="#top"><span class="mark"><svg viewBox="0 0 20 20" width="18" height="18" aria-hidden="true"><path d="M10 2.5 16.5 5v4.6c0 3.8-2.6 6.6-6.5 7.9-3.9-1.3-6.5-4.1-6.5-7.9V5z" fill="#f2f7ff"/><path d="m7.2 10 2 2 3.6-4" stroke="#2f6bff" stroke-width="1.7" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></span>CyberNexus</a><p class="tag">Security tools you can understand.</p></div>
+  <div>
+   <div class="idx">
+    <nav><p>Tools</p><a onclick="openTool('url')">Link checker</a><a onclick="openTool('ip')">IP checker</a><a onclick="openTool('pw')">Password tester</a><a onclick="openTool('ssl')">SSL checker</a><a onclick="openTool('dns')">DNS lookup</a></nav>
+    <nav><p>More tools</p><a onclick="openTool('headers')">Security headers</a><a onclick="openTool('hash')">Hash generator</a><a onclick="openTool('whois')">WHOIS lookup</a><a onclick="openTool('file')">File reputation</a></nav>
+    <nav><p>Learn</p><a href="#learn">Spot a phish</a><a href="#faq">FAQ</a><a href="#why">Why CyberNexus</a></nav>
+   </div>
+   <p class="copy">© 2026 CyberNexus · Heuristic checks, not a guarantee</p>
+  </div>
+ </div>
+ <div class="panel fpanel"><div class="mist" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></div><div class="grain" aria-hidden="true"></div>
+  <div class="word" aria-hidden="true"><span>Stay<br>safe.</span></div>
+  <div class="foot"><span class="glass chip">Always verify with the real site directly · Never share one-time codes</span>
+  <button class="glass chip" style="color:inherit;cursor:pointer;font:inherit" onclick="scrollTo({top:0,behavior:'smooth'})">Back to top ↑</button></div>
+ </div>
+</footer>
+
+<script src="script.js"></script>
+<script>
+(function(){var els=document.querySelectorAll('.rv');
+if(!('IntersectionObserver' in window)){els.forEach(function(e){e.classList.add('in')});return}
+var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.12});
+els.forEach(function(e){io.observe(e)})})();
+</script>
+</body>
+</html>
