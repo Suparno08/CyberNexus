@@ -3,8 +3,8 @@ const http = require('http'), fs = require('fs'), path = require('path'), net = 
 const dns = require('dns').promises;
 
 const PORT = process.env.PORT || 3000;
-const HOST = process.env.HOST || '127.0.0.1'; // local only by default
-const PUB = path.join(__dirname, 'public');
+const HOST = process.env.HOST || '0.0.0.0'; // local only by default
+const PUB = path.join(__dirname, 'Public');
 const MIME = {'.html': 'text/html', '.css': 'text/css', '.js': 'text/javascript', '.svg': 'image/svg+xml'};
 const err = (code, msg) => Object.assign(new Error(msg), {code});
 
