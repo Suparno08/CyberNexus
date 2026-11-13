@@ -49,6 +49,20 @@ CyberNexus/
 ├── .gitignore
 └── README.md
 ```
+## 📸 Screenshots
+
+### Homepage
+![CyberNexus Homepage](screenshots/homepage.png)
+
+### Cybersecurity Tools
+![CyberNexus Tools](screenshots/all-tools.png)
+
+### DNS Lookup
+![DNS Lookup](screenshots/dns-lookup.png)
+
+### File Reputation Checker
+![File Reputation Checker](screenshots/file-reputation.png)
+
 
 ## ⚙️ Installation & Setup
 
