@@ -156,7 +156,3 @@ CyberNexus is developed by **Team PixelBits**.
 **CyberNexus — Explore. Analyze. Secure.**
 
 *Built with ❤️ by Team PixelBits.*
-
-**CyberNexus — Explore. Analyze. Secure.**
-
-*Built with ❤️ by Team PixelBits.*
